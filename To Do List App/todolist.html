@@ -1,0 +1,61 @@
+<!-- Pin: Fix padding or whatever with chatgpt, then look up a guide on how to do a to do list, cus do HTML elements get generated?-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Organiser</title>
+    <link rel="stylesheet" href="todolist.css">
+    <script src="todolist.js" defer></script>
+  </head>
+  <body class="main">
+
+    <div class="sidebar">
+        <ul>
+          <li><a>Home</a></li>
+          <li><a>About</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="inputForm">
+      <form>
+        <h1> What have you got coming up sport?</h1>
+
+        <label for="task-time">Task Form Start</label>
+        <!-- change min, max and auto value to today's date -->
+        <input type="datetime-local" 
+          id="task-time"
+          name="task-time"
+          value="2018-06-12T19:30"
+          min="2018-06-07T00:00"
+          max="2018-06-14T00:00" />
+        <input type="text" id="task-desc" value="some text">
+        <input type="submit" id="submit-btn">
+
+        <table id="table-of-tasks">
+          <caption>
+            Task List
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Datetime</th>
+              <th scope="col">Task</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody id="task-list">
+
+          </tbody>
+        </table>
+
+      </form>
+    </div>
+
+    <footer class="footer">
+      <p>© 2024 Life Organiser App</p>
+    </footer>
+  </body>
+  
+</html>
